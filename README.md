@@ -1,10 +1,8 @@
-# Data Science Notes
-
 ## Key Concepts in Classification Models
 
-**True positive** an outcome where the model correctly predicts the positive class <br>
-**False positive** an outcome where the model incorrectly predicts the positive class <br>
-**False negative** an outcome where the model incorrectly predicts the negative class <br>
+**True positive** an outcome where the model correctly predicts the positive class. Also know as a correct prediction <br>
+**False positive** an outcome where the model incorrectly predicts the positive class. Also know as an incorrect prediction <br>
+**False negative** an outcome where the model incorrectly predicts the negative class. Also know as an incorrect prediction <br>
 
 **Precision** 
 * Number of true positives / ( number of true positives + number of false **positives**)
