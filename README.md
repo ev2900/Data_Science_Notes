@@ -1,9 +1,11 @@
-## Key Concepts in Classification Model(s)
+# Key Concepts in Classification Model(s)
 
 **True positive** an outcome where the model correctly predicts the positive class. A correct prediction <br>
 **True negative** an outcome where the model correctly predicts the negative class. A correct prediction <br>
 **False positive** an outcome where the model incorrectly predicts the positive class. An incorrect prediction <br>
 **False negative** an outcome where the model incorrectly predicts the negative class. An incorrect prediction <br>
+
+## Precision, Accuracy & Recall
 
 **Precision** 
 * $\frac{number \hspace{1mm} of \hspace{1mm} true \hspace{1mm} positives}{number \hspace{1mm} of \hspace{1mm} true \hspace{1mm} positives \hspace{1mm} + \hspace{1mm} number \hspace{1mm} of \hspace{1mm} false \hspace{1mm} positives \hspace{1mm}}$
@@ -16,7 +18,8 @@
 * Bear in mind that precision only looks at positives. The formula for precision does not include true or false negatives
   
 **Accuracy**
-* $\frac{number \hspace{1mm} of \hspace{1mm} true \hspace{1mm} positives \hspace{1mm} + \hspace{1mm} number \hspace{1mm} of \hspace{1mm} true \hspace{1mm} negatives}{number \hspace{1mm} of \hspace{1mm} true \hspace{1mm} positives \hspace{1mm} + \hspace{1mm} number \hspace{1mm} of \hspace{1mm} true \hspace{1mm} negatives \hspace{1mm} + \hspace{1mm} number \hspace{1mm} of \hspace{1mm} false \hspace{1mm} positives \hspace{1mm} + \hspace{1mm} number \hspace{1mm} of \hspace{1mm} false \hspace{1mm} negatvies \hspace{1mm}}$ OR $\frac{number \hspace{1mm} of \hspace{1mm} correct \hspace{1mm} predictions}{total \hspace{1mm} number \hspace{1mm} of \hspace{1mm} predictions}$
+* $\frac{number \hspace{1mm} of \hspace{1mm} true \hspace{1mm} positives \hspace{1mm} + \hspace{1mm} number \hspace{1mm} of \hspace{1mm} true \hspace{1mm} negatives}{number \hspace{1mm} of \hspace{1mm} true \hspace{1mm} positives \hspace{1mm} + \hspace{1mm} number \hspace{1mm} of \hspace{1mm} true \hspace{1mm} negatives \hspace{1mm} + \hspace{1mm} number \hspace{1mm} of \hspace{1mm} false \hspace{1mm} positives \hspace{1mm} + \hspace{1mm} number \hspace{1mm} of \hspace{1mm} false \hspace{1mm} negatvies \hspace{1mm}}$
+* OR $\frac{number \hspace{1mm} of \hspace{1mm} correct \hspace{1mm} predictions}{total \hspace{1mm} number \hspace{1mm} of \hspace{1mm} predictions}$
   
 * The best possible accuracy a model can achieve it 1
 * The worst possible accuracy a model can achieve is 0
@@ -28,8 +31,19 @@
 **Recall**
 * $\frac{number \hspace{1mm} of \hspace{1mm} true \hspace{1mm} positives}{number \hspace{1mm} of \hspace{1mm} true \hspace{1mm} positives \hspace{1mm} + \hspace{1mm} number \hspace{1mm} of \hspace{1mm} false \hspace{1mm} negatives}$
 
-* The ability of a model to find all the relevant cases within a data set
-* Recall can be a better metric to measure a model - instead of accuracy
+* The best possible recall a model can achieve is 1
+* The best possible recall a model can achieve is 1
+* Recall can be thought of as the proportion correctly classified positive classes among all the real positive classes
+* Using our will it rain classification model example, recall is proportion of times the model predicated it would rain among all the times it actually rained
 
-**F1**
-* 2 * ( Precision * Recall ) / (Precision + Recall)
+**Which metric is most important?**
+Using our will it rain classification model example
+* Optimize for accuracy when you want to predicting both when it will rain and when it will not rain correctly and our dataset is balanced enough
+* Optimize for precision when you want predictions of when it will rain to be as correct  as possible
+* Optimize for recall when we want our model to spot as many real rainy days as possible
+
+Bonus **F1 score**
+* $2 * \frac{Precision \hspace{1mm} * \hspace{1mm} Recall}{Precision \hspace{1mm} + \hspace{1mm} Recall}$
+
+* Harmonic mean of precision and recall
+* Combines precision and recall into a single metric
