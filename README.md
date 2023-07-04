@@ -1,5 +1,7 @@
 # Key Concepts in Classification Model(s)
 
+This readme is a place to document key concepts of data science esp. as it pertains to classification models.
+
 ## Precision, Accuracy & Recall
 
 Calculating precision, accuracy and recall requires testing a model with a labeled data set and determining the number of true positives, True negatives, false positives and false negatives. 
